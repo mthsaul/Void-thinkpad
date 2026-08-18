@@ -1,0 +1,63 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 6,
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["wlr/window"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "battery", "clock", "tray"],
+    
+    "wlr/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "active-only": false,
+        "format-icons": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        "all-outputs": false
+    },
+    
+    "wlr/window": {
+        "format": "{}",
+        "max-length": 60,
+        "icon": true
+    },
+    
+    "cpu": {
+        "format": "🧠 {usage}%",
+        "interval": 2
+    },
+    
+    "memory": {
+        "format": "💾 {percentage}%",
+        "interval": 5
+    },
+    
+    "pulseaudio": {
+        "format": "🔊 {volume}%",
+        "format-muted": "🔇 {volume}%",
+        "on-click": "pavucontrol",
+        "scroll-step": 5
+    },
+    
+    "battery": {
+        "format": "🔋 {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": "🔌 {capacity}%",
+        "states": {
+            "critical": 15,
+            "warning": 30
+        },
+        "interval": 10
+    },
+    
+    "clock": {
+        "format": "🕐 {:%H:%M}",
+        "format-alt": "📅 {:%A %d/%m}",
+        "tooltip-format": "{:%A, %d de %B de %Y - %H:%M}",
+        "interval": 60
+    },
+    
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    }
+}

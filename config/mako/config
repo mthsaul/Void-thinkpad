@@ -1,0 +1,12 @@
+font=Iosevka Term 11
+background-color=#102b24ee
+text-color=#d8ebd0
+border-color=#9acb9a
+border-size=1
+border-radius=0
+default-timeout=6000
+padding=12
+margin=12
+
+[urgency=critical]
+border-color=#e58b75
