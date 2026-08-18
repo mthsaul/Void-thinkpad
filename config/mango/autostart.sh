@@ -9,7 +9,6 @@ if [ -z "${DBUS_SESSION_BUS_ADDRESS:-}" ]; then
     ln -sf "$BUS_PATH" "/run/user/$(id -u)/bus"
 fi
 pulseaudio --start &
-omniroute > /tmp/omniroute.log 2>&1 &
 swaybg -c '#20483c' &
 
 # waybar con auto-reintento: si muere al arrancar, lo relanza hasta 5 veces
