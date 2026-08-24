@@ -1,0 +1,29 @@
+@import "colors-wallpapers.rasi"
+
+* { background-color: transparent; text-color: @foreground; }
+
+window {
+    width: 60%;
+    height: 55%;
+    background-color: @background;
+    border: 2px;
+    border-color: @border;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+mainbox { children: [ "inputbar", "listview" ]; spacing: 15px; }
+
+inputbar { background-color: @input-bg; padding: 8px 12px; border-radius: 8px; }
+
+listview {
+    columns: 3;
+    lines: 1;
+    spacing: 15px;
+    scrollbar: true;
+}
+
+element { orientation: vertical; padding: 8px; border-radius: 10px; }
+element selected { background-color: @selected-bg; border: 2px; border-color: @accent; }
+element-icon { size: 220px; horizontal-align: 0.5; border-radius: 8px; }
+element-text { font: "IosevkaTerm Nerd Font 9"; horizontal-align: 0.5; }
