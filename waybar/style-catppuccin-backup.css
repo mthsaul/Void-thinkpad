@@ -1,0 +1,111 @@
+/* ====== ESTILOS GENERALES ====== */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Noto Sans", "DejaVu Sans", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(30, 30, 35, 0.88);
+    color: #cdd6f4;
+    border-bottom: 2px solid #313244;
+    padding: 0 8px;
+}
+
+/* ====== ESPACIOS DE TRABAJO ====== */
+#workspaces {
+    padding: 0 6px;
+    margin: 0 4px;
+}
+
+#custom-rofi { padding: 0 10px; margin-right: 4px; color: #89b4fa; font-size: 16px; }
+#custom-rofi:hover { color: #cdd6f4; }
+
+#workspaces button {
+    padding: 2px 10px;
+    margin: 2px 2px;
+    color: #6c7086;
+    border-radius: 6px;
+    background: rgba(49, 50, 68, 0.5);
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+    background: rgba(137, 180, 250, 0.2);
+    border: 1px solid #89b4fa;
+}
+
+#workspaces button:hover {
+    color: #cdd6f4;
+    background: rgba(205, 214, 244, 0.1);
+}
+
+/* ====== TÍTULO DE VENTANA ====== */
+#window {
+    padding: 0 12px;
+    color: #a6e3a1;
+    font-weight: normal;
+}
+
+/* ====== MÓDULOS DE LA DERECHA ====== */
+#cpu, #memory, #pulseaudio, #network, #battery, #clock, #tray {
+    padding: 0 10px;
+    margin: 0 2px;
+    border-radius: 4px;
+}
+
+#cpu {
+    color: #89b4fa;
+}
+
+#memory {
+    color: #cba6f7;
+}
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#pulseaudio.muted {
+    color: #6c7086;
+}
+
+#network {
+    color: #89dceb;
+}
+
+#network.disconnected {
+    color: #6c7086;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(243, 139, 168, 0.2);
+    }
+}
+
+#clock {
+    color: #a6e3a1;
+    font-weight: bold;
+}
+
+#tray {
+    background: transparent;
+    padding: 0 6px;
+}
