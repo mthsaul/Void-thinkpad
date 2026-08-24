@@ -9,20 +9,20 @@ if [ -z "${DBUS_SESSION_BUS_ADDRESS:-}" ]; then
     ln -sf "$BUS_PATH" "/run/user/$(id -u)/bus"
 fi
 pulseaudio --start &
-swaybg -c '#20483c' &
+swaybg -i "$HOME/Pictures/miku/wallhaven-gwmyk7.jpg" -m fill &
 
-# waybar con auto-reintento: si muere al arrancar, lo relanza hasta 5 veces
-(
-  sleep 2
-  for i in 1 2 3 4 5; do
-    if ! pgrep -x waybar > /dev/null; then
-      waybar -c "$HOME/.config/waybar/config-green" -s "$HOME/.config/waybar/style-green.css" >> /tmp/waybar-autostart.log 2>&1 &
-      sleep 3
-    else
-      break
-    fi
-  done
-) &
+# Mantiene disponible el proxy local para Codex en cada inicio de sesión.
+if ! pgrep -x omniroute >/dev/null 2>&1; then
+  nohup omniroute >> "$HOME/.omniroute.log" 2>&1 </dev/null &
+fi
+
+/usr/lib/xdg-desktop-portal-wlr &
+
+# waybar independiente de la terminal
+nohup waybar \
+  -c "$HOME/.config/waybar/config" \
+  -s "$HOME/.config/waybar/style.css" \
+  >> /tmp/waybar-autostart.log 2>&1 </dev/null &
 
 mako &
 wl-paste --type text --watch cliphist store &
