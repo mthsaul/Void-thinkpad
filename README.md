@@ -104,4 +104,37 @@ El script:
 ```bash
   wal -i /ruta/a/tu/wallpaper.png -n -q --saturate 0.3
 ```
-- Abre el selector de wallpapers con `SUPER+SHIFT+W` (o revisa el bind en `mango/config.conf`).
+- Abre el selector de wallpapers con `SUPER + `` ` `` (grave)` (o revisa el bind en `mango/config.conf`).
+
+---
+
+## ⌨️ Atajos de teclado
+
+| Atajo | Acción |
+|---|---|
+| `SUPER + Space` | Abrir launcher de apps (rofi) |
+| `SUPER + \`` (grave) | Selector visual de wallpapers / temas |
+| `SUPER + Return` | Abrir terminal (kitty) |
+| `SUPER + Q` | Cerrar ventana activa |
+| `SUPER + R` | Recargar configuración de mango |
+| `SUPER + Shift + P` | Menú de apagado/energía |
+| `SUPER + Shift + L` | Bloquear pantalla |
+| `SUPER + Shift + S` | Captura de área (grim + slurp) |
+| `SUPER + Shift + Print` | Captura de pantalla completa |
+| `SUPER + Shift + C` | Captura con flameshot (GUI) |
+| `SUPER + F` | Pantalla completa |
+| `SUPER + A` | Maximizar |
+| `SUPER + Backslash` | Alternar ventana flotante |
+| `SUPER + Tab` | Vista general (overview) |
+| `SUPER + Z` | Scratchpad |
+| `SUPER + N` | Cambiar layout |
+| `Alt + Tab` | Cambiar entre ventanas |
+| `Alt + ←/→/↑/↓` | Mover foco entre ventanas (dirección) |
+| `Ctrl + 1-9` | Ir al workspace N |
+| `Alt + 1-9` | Mandar ventana al workspace N |
+| `Alt+Shift + ←/→` | Cambiar de monitor |
+| `Alt+Shift + X/Z` | Aumentar/reducir gaps |
+| `Ctrl+Shift + flechas` | Mover ventana flotante |
+| `Ctrl+Alt + flechas` | Redimensionar ventana flotante |
+
+> Lista completa en `mango/config.conf`.
