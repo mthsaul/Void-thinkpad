@@ -80,3 +80,28 @@ terminal, waybar, cursor y rofi cambian de color juntos.
 Hecho con 💚 en Void Linux
 
 </div>
+
+---
+
+## 🚀 Instalación
+
+> ⚠️ Estos dotfiles asumen **Void Linux** con **mango** (Wayland). Revisa cada archivo antes de aplicarlo — algunas rutas están escritas a mano (usuario `void`) y puede que necesites ajustarlas.
+
+```bash
+git clone https://github.com/mthsaul/Void-thinkpad.git ~/dotfiles
+cd ~/dotfiles
+./install.sh
+```
+
+El script:
+- Respalda tu configuración actual (`~/.config/algo` → `~/.config/algo.bak`) antes de tocar nada.
+- Crea symlinks desde `~/dotfiles/config/` hacia `~/.config/`, así que cualquier cambio futuro en el repo se refleja automáticamente (haz `git pull` para actualizar).
+- Te lista los paquetes necesarios al final — instálalos con `xbps-install` si te falta alguno.
+
+### Después de instalar
+
+- Genera tu primer tema de colores con pywal:
+```bash
+  wal -i /ruta/a/tu/wallpaper.png -n -q --saturate 0.3
+```
+- Abre el selector de wallpapers con `SUPER+SHIFT+W` (o revisa el bind en `mango/config.conf`).
