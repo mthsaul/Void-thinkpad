@@ -1,0 +1,43 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka Term", "Symbols Nerd Font Mono", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 43, 38, 0.9);
+    color: #ffffff;
+    border: 1px solid rgba(120, 200, 120, 0.25);
+}
+
+#ext-workspaces button {
+    padding: 0 6px;
+    margin: 0 2px;
+    background: transparent;
+    color: #ffffff;
+}
+
+#ext-workspaces button.active {
+    background-color: rgba(46, 139, 46, 0.35);
+    color: #4caf50;
+}
+
+#custom-rofi, #custom-omniroute, #cpu, #memory,
+#pulseaudio, #network, #custom-battery, #clock, #custom-power {
+    padding: 0 6px;
+    margin: 0;
+    background: transparent;
+    color: #ffffff;
+}
+
+#custom-rofi {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+#custom-power {
+    color: #ffffff;
+}

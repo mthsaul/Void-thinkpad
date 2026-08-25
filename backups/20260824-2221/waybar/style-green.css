@@ -1,0 +1,44 @@
+@import url("file:///home/void/.cache/wal/colors-waybar.css");
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "IosevkaTerm Nerd Font", monospace;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar { background: transparent; color: @color7; }
+
+.modules-center {
+  margin-top: 6px;
+  padding: 2px 8px;
+  color: @color7;
+  background: alpha(@color0, 0.93);
+  border: 1px solid @color2;
+}
+
+#workspaces button { padding: 0 6px; color: @color8; background: transparent; }
+#workspaces button.active { color: @color15; background: @color1; }
+#custom-omniroute { margin-left: 12px; padding: 0 7px; }
+
+#custom-rofi { padding: 0 10px; color: @color3; font-size: 16px; }
+#custom-rofi:hover { color: @color15; }
+#custom-theme { padding: 0 10px; color: @color5; font-size: 16px; margin-right: 8px; }
+#custom-theme:hover { color: @color15; }
+#cpu, #memory, #pulseaudio, #battery, #clock { padding: 0 7px; }
+#network { padding: 0 7px; color: @color7; }
+#network.disconnected { color: @color8; }
+#clock { color: #b9dfaf; }
+#battery.warning { color: #e5c875; }
+#battery.critical { color: #e58b75; }
+
+tooltip {
+    background: rgba(20, 40, 30, 0.95);
+    border: 1px solid #3a7a5f;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: #d8f0e0;
+}
