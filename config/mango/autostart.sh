@@ -9,7 +9,8 @@ if [ -z "${DBUS_SESSION_BUS_ADDRESS:-}" ]; then
     ln -sf "$BUS_PATH" "/run/user/$(id -u)/bus"
 fi
 pulseaudio --start &
-swaybg -i "$HOME/Pictures/miku/wallhaven-gwmyk7.jpg" -m fill &
+swww-daemon &
+swww img "$HOME/Pictures/miku/wallhaven-gwmyk7.jpg" &
 
 # Mantiene disponible el proxy local para Codex en cada inicio de sesión.
 if ! pgrep -x omniroute >/dev/null 2>&1; then
@@ -20,8 +21,8 @@ fi
 
 # waybar independiente de la terminal
 nohup waybar \
-  -c "$HOME/.config/waybar/config" \
-  -s "$HOME/.config/waybar/style.css" \
+  -c "$HOME/.config/waybar/config-green" \
+  -s "$HOME/.config/waybar/style-green.css" \
   >> /tmp/waybar-autostart.log 2>&1 </dev/null &
 
 mako &
